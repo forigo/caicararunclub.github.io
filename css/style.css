@@ -77,11 +77,22 @@ header .header-footer-text {
     color: var(--second-color);
     text-align: center;
     font-size: 0.7rem;
-    bottom: 90px;
-    right: 90px;
+    bottom: 125px;
+    right: 110px;
 }
 
 header .social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--second-color);
+    gap: 30px;
+    font-size: 1.3rem;
+    margin-top: 30px;
+}
+
+header .social-media-insta,
+header .social-media-strava {
     display: flex;
     align-items: center;
     justify-content: center;
