@@ -8,7 +8,7 @@
     font-size: 62.5%; /* 1rem = 10px */
 
     --primary-color: #1b1c1c;
-    --second-color: #ed4b13;
+    --second-color: rgb(237, 75, 19);
     --light-color: #f9f6eecf;
     --shadow: #222222d4;
     --width-auto: auto;
@@ -67,16 +67,158 @@ header .header-logo img {
     max-width: 300px;
 }
 
-header .header-text {
+header .header-sub {
     color: var(--light-color);
     text-transform: uppercase;
     font-style: italic;
     text-align: center;
-    margin: 10px 0 35px 0;
+    margin: 10px 0 5px 0;
+}
+
+header .header-text {
+    max-width: 300px;
+    color: var(--second-color);
+    text-align: center;
+    margin: 5px 0 35px 0;
+}
+
+.button-section {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+button {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 17px 17px;
+  outline: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: var(--primary-color);
+  border: 1px solid rgb(237, 75, 19);
+  border-radius: 50px;
+  color: var(--second-color);
+  font-weight: 400;
+  font-family: inherit;
+  z-index: 0;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+button span {
+  color: var(--second-color);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+
+button:hover {
+  animation: rotate624 0.7s ease-in-out both;
+  background-color: var(--second-color);
+}
+
+button:hover span {
+  animation: storm1261 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+  font-style: italic;
+  color: var(--primary-color);
+}
+
+@keyframes rotate624 {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes storm1261 {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+
+.btn-shine {
+  border: 1px solid;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 0px;
+}
+
+.btn-shine span {
+  z-index: 20;
+}
+
+.btn-shine span i {
+  font-size: 15px;
+}
+
+.btn-shine img {
+    max-width: 20px;
+}
+
+.btn-shine:after {
+  background: var(--second-color);
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: 0.4;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 50px;
+  z-index: -10;
+}
+
+.btn-shine:hover:after {
+  left: 120%;
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 header .section-logo img {
-    max-width: 250px;
+    max-width: 50px;
+    display: flex;
+    margin: 20px auto 0 auto;
 }
 
 header .header-footer-text {
@@ -95,7 +237,7 @@ header .social-media {
     color: var(--second-color);
     gap: 30px;
     font-size: 1.3rem;
-    margin-top: 30px;
+    margin-top: 0px;
 }
 
 header .social-media-insta,
