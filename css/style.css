@@ -8,7 +8,7 @@
     font-size: 62.5%; /* 1rem = 10px */
 
     --primary-color: #1b1c1c;
-    --second-color: rgb(237, 75, 19);
+    --second-color: #ed4912;
     --light-color: #f9f6eecf;
     --shadow: #222222d4;
     --width-auto: auto;
@@ -89,6 +89,16 @@ header .header-text {
     gap: 20px;
 }
 
+.button-section-small {
+    margin-top: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    
+}
+
 button {
   width: 100%;
   position: relative;
@@ -112,6 +122,31 @@ button {
   transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
 }
 
+.button-section-small button {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  margin: 0;
+  padding: 17px 17px;
+  outline: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: var(--second-color);
+  border: 0;
+  border-radius: 12px;
+  color: var(--primary-color);
+  font-weight: 400;
+  font-family: inherit;
+  z-index: 0;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px #00000078;
+  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
 button span {
   color: var(--second-color);
   font-size: 10px;
@@ -119,10 +154,22 @@ button span {
   letter-spacing: 0.7px;
 }
 
+.button-section-small button {
+  color: var(--primary-color);
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+
+.button-section-small button img {
+  max-width: 30px;
+}
+
 button:hover {
   animation: rotate624 0.7s ease-in-out both;
   background-color: var(--second-color);
 }
+
 
 button:hover span {
   animation: storm1261 0.7s ease-in-out both;
