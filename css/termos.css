@@ -1,0 +1,57 @@
+body {
+    background-image: url(/assets/cookies_bg.jpg);
+    background-repeat: repeat;
+    background-size: 150px;
+}
+
+.main {
+    width: 100%;
+    padding: 0 3rem;
+}
+
+.termos-content {
+    height: auto;
+    max-width: 1080px;
+    width: auto;
+    margin: 10rem auto 70px auto;
+    background: #fff;
+    padding: 25px 35px;
+}
+
+.termos-content h5 {
+    color: #ED4B13;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.termos-content p {
+    text-align: left;
+    font-size: 12px;
+    color: #484f56;
+}
+
+.termos-content ol {
+    color: #ED4B13;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 0 15px;
+}
+
+.termos-content ol h6 {
+    text-transform: uppercase;
+    color: #ED4B13;
+    text-align: left;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.termos-content ol li ol li p {
+    font-weight: normal;
+    color: #484f56;
+}
+
+.termos-content ul {
+    padding-left: 15px;
+        list-style: disc;
+}

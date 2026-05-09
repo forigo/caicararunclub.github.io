@@ -1,0 +1,155 @@
+
+body {
+    background-image: url(/assets/cookies_bg.jpg);
+    background-repeat: repeat;
+    background-size: 150px;
+}
+
+.main {
+    width: 100%;
+    padding: 0 3rem;
+}
+
+#gallery .logo-cambada img {
+  width: 250px;
+  margin: 0 auto;
+}
+
+.gallery-content {
+    max-width: 1080px;
+    height: auto;
+    width: auto;
+    margin: 0rem auto 70px auto;
+    background-image: url(/assets/gallery_bg.jpg);
+    background-size: 150px;
+    background-repeat: repeat;
+    padding: 25px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    border-radius: 10px;
+}
+
+.gallery-content > h1 > span {
+  border-radius: 8px;
+  padding: 0 5px;
+  background-color: var(--third-color);
+  color: #fff;
+}
+
+
+/* Cards dos Estabelecimentos */
+
+.cards {
+    width: auto;
+    display: grid;
+    grid-template-columns: 250px;
+    justify-content: space-around;
+    justify-items: center;
+    margin: 0 auto;
+    grid-gap: 1rem;
+    align-items: center;
+}
+
+.cards:first-child {
+    margin-top: 50px;
+}
+
+.cards:last-child {
+    margin-bottom: 50px;
+}
+
+.card-wrap {
+  filter: drop-shadow(rgba(0, 0, 0, 0.195) 0px 0px 3px);
+  cursor: pointer;
+}
+
+.card-wrap:hover {
+  filter: drop-shadow(var(--primary-color) 0px 0px 3px);
+}
+
+.remove {
+  display: none;
+}
+
+.card {
+    position: relative;
+    width: 250px;
+    height: 346px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    background: transparent;
+  }
+
+.main-card {
+    position: relative;
+    top: 4px;
+    left: 0px;
+    width: 240px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    background: #fff;
+}
+  
+  .card-img {
+    height: auto;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .card-img img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .main-card a {
+    margin: 0 auto;
+  }
+
+
+.title {
+    position: absolute;
+    right: 0px;
+    bottom: 5%;
+    width: auto;
+    border-radius: 8px 0 0 8px;
+    background-color: var(--second-color);
+    filter: drop-shadow(#202020 0px 0px 7px);
+}
+
+.title > p {
+  color: var(--light-color);
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 4px 5px;
+}
+
+/* Screen larger than 600px? 2 column */
+@media (min-width: 600px) {
+
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 900px) {
+
+
+  .cards { grid-template-columns: repeat(3, 1fr); }
+} 
+
+/* Screen larger than 1080px? 4 columns */
+@media (min-width: 1080px) {
+
+  .cards { grid-template-columns: repeat(4, 1fr); }
+
+}  
+
+  
