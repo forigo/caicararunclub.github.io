@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/ccc21e8b90.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <title>Caiçara Run Club</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header id="home">
+        <div id="top">
+            
+        </div>
+    
+        <nav id="navigation">
+
+            <div class="wrapper">
+                <a href="/" class="logo">
+                    <img src="/assets/logo.png">                 
+                </a>
+
+                <div class="menu">
+                    <ul>
+                        <li><a onclick="closeMenu()" href="#home">Início</a></li>
+                        <li><a onclick="closeMenu()" href="#about">Sobre Nós</a></li>
+                        <li><a onclick="closeMenu()" href="#events">Corres</a></li>
+                        <li><a onclick="closeMenu()" href="#garra">Garra</a></li>
+                    </ul>
+
+                    <a class="button" href="https://forms.gle/4u57P5RoTtG3i7dL8" target="_blank"><i class="fa-solid fa-cart-shopping"></i>&nbsp;&nbsp;Loja</a>
+
+                </div>
+
+                <button aria-expanded="false" aria-label="Abrir menu" onclick="openMenu()" class="open-menu">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 20H30" stroke="#ED4B13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 12H30" stroke="#ED4B13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18 28L30 28" stroke="#ED4B13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>  
+                </button>
+                <button aria-expanded="true" aria-label="Fechar menu" onclick="closeMenu()" class="close-menu">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30 10L10 30M10 10L30 30" stroke="#ED4B13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg> 
+                </button>
+                            
+            </div>
+
+        </nav>
+
+        <div class="banner-desktop">
+            <a href="https://forms.gle/4u57P5RoTtG3i7dL8" target="_blank"><img src="/assets/desktop_banner.jpg"></a>
+        </div>
+        <div class="banner-mobile">
+            <a href="https://forms.gle/4u57P5RoTtG3i7dL8" target="_blank"><img src="/assets/mobile_banner.jpg"></a>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="wrapper">
+
+            <div class="about-content">
+
+                <div class="about-content-left">
+                    <h4>Sobre Nós: o Caiçara Run Club</h4>
+                        <p>O <span>Caiçara Run Club (CRC)</span> nasceu da mesma forma que as melhores amizades: de forma orgânica, sem pressão e movido por um propósito compartilhado. O que começou como uma "banda de garagem" entre amigos que queriam apenas correr, transformou-se em um coletivo vibrante que celebra o esporte e a cultura do nosso litoral.</p>
+                        <p>Aqui, o ego fica de fora e o respeito pelas comunidades locais vem sempre em primeiro lugar. Acreditamos que a corrida é para todos — do iniciante que dá seus "passos de formiga" ao corredor mais experiente. Nosso objetivo é incentivar a nossa <span>cambada</span> a sair da zona de conforto, mudar o estilo de vida e entender que o passo mais importante é sempre o primeiro.</p>
+                        <p><span>O Poder do Coletivo</span></p>
+                        <p>Correr sozinho pode ser bom, mas correr em grupo é transformador. No CRC, a energia vem da sincronia dos tênis batendo no asfalto e do incentivo de quem está ao lado. Nossa filosofia é simples: ninguém fica para trás. Se um cansa, o outro motiva; se um puxa, todos vão. Mais do que velocidade, buscamos o sentimento de pertencimento, a conexão real e a superação conjunta.</p>
+                        <p><span>DNA Caiçara</spam></p>
+                        <p>Ser Caiçara é respeitar o tempo da maré e a força da Serra do Mar. É carregar a resiliência no DNA e encontrar alegria no cheiro do mangue e no pé na areia. Juntos, fazemos da rua o nosso impulso e tornamos cada quilômetro mais leve.</p>
+                        <p><span>Bora correr com a gente?</span> No Caiçara Run Club, você encontra o seu ritmo e uma comunidade que corre junto com você.</p>
+                </div>
+                
+                <div class="about-content-right">
+                    <img src="/assets/back_about.png">
+                </div>
+    
+            </div>
+
+        </div>
+    
+    </section>
+
+    <section id="events">
+        <div class="wrapper">
+
+            <div class="events-content">
+
+                <div class="events-content-left">
+                    <h1>Próximo Corre</h1>
+                    <h4>17.05 Corre do Dia das Mães</h4>
+                    <p>Um dia especial para quem corre por nós todos os dias! 🧡🏃‍♀️</p>
+                    <p>O <span>Caiçara Run Club</span> e o Bagrinhos Runners se uniram para celebrar o <span>Dia das Mães</span> com uma manhã cheia de energia, autocuidado e, claro, muito movimento! Seja você corredor(a) de elite ou do time da caminhada, o importante é <span>celebrar juntos.</span></p>
+                    <br>
+                    <br>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Quando:</th>
+                                <th>Horário:</th>
+                                <th>Onde:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>17/05</td>
+                                <td>Às 08h30</td>
+                                <td>Praça de Eventos</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a class="button" href="https://forms.gle/PCJSUhYTiC1d5UXk6" target="_blank"><i class="fa-solid fa-person-running"></i>&nbsp;&nbsp;Se Inscrever</a>
+                </div>
+                
+                <div class="events-content-right">
+                    <a href="https://forms.gle/PCJSUhYTiC1d5UXk6" target="_blank"><img src="/assets/diadasmaes_event.jpg"></a>
+                </div>
+    
+            </div>
+
+        </div>
+    
+    </section>
+
+    <section id="garra">
+        <div class="banner-desktop">
+            <img src="/assets/Banner_garra_desktop.jpg">
+        </div>
+        <div class="banner-mobile">
+            <img src="/assets/Banner_garra_mobile.jpg">
+        </div>
+        <a class="button" href="https://forms.gle/4u57P5RoTtG3i7dL8" target="_blank"><i class="fa-solid fa-cart-shopping"></i>&nbsp;&nbsp;Comprar</a>
+
+    </section>
+
+    <section id="sponsor">
+        <div class="wrapper">
+            
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="slide">
+                        <img src="/assets/correndocomgarra.png">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/garrinha.png">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/caicararunclub.png">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/garrinha.png">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/correndocomgarra.png">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/garrinha.png">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/caicararunclub.png">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/garrinha.png">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/correndocomgarra.png">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/garrinha.png">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/caicararunclub.png">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/garrinha.png">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/correndocomgarra.png">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/garrinha.png">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/caicararunclub.png">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/garrinha.png">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/correndocomgarra.png">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/garrinha.png">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/caicararunclub.png">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/garrinha.png">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/correndocomgarra.png">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/garrinha.png">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/caicararunclub.png">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/garrinha.png">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </section>
+
+    <section id="gallery">
+        <div class="wrapper">
+            <div class="slider-gallery">
+                <div class="slides-gallery">
+                    <div class="slide-gallery" id="slide-1">
+                    <img src="/assets/foto1.jpg" alt="Slide 1">
+                    </div>
+                    <div class="slide-gallery" id="slide-2">
+                    <img src="/assets/foto2.jpg" alt="Slide 2">
+                    </div>
+                    <div class="slide-gallery" id="slide-3">
+                    <img src="/assets/foto3.jpg" alt="Slide 3">
+                    </div>
+                </div>
+
+                <!-- Navegação Opcional -->
+                <div class="nav-gallery">
+                    <a href="#slide-1"></a>
+                    <a href="#slide-2"></a>
+                    <a href="#slide-3"></a>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <img src="/assets/foto1.jpg">
+                <img src="/assets/foto2.jpg">
+                <img src="/assets/foto3.jpg">
+            </div>
+
+        </div>
+    </section>
+
+    <section id="whatsapp">
+        <div class="banner-desktop">
+            <img src="/assets/bg_whatsapp.jpg">
+        </div>
+        <div class="banner-mobile">
+            <img src="/assets/bg_whatsapp_mobile.jpg">
+        </div>
+        <div class="text-content">
+            <h1>Entre para o nosso grupo de <span>WhatsApp</span></h1>
+            <p>Além de muita resenha e incentivo entre nossa cambada, você ainda participa de sorteios exclusivos.</p>
+            <a class="button" href="https://chat.whatsapp.com/EwzTvuDsBEbCz0Qc9dZkSt?mode=gi_t" target="_blank"><i class="fa-brands fa-whatsapp"></i>&nbsp;&nbsp;Entrar</a>
+        </div>
+        
+
+    </section>
+
+    <section id="social">
+
+        <div class="wrapper">
+
+            <div class="social-content">
+                <h4>Redes Sociais</h4>
+                <h1>Onde nos encontrar</h1>
+                <div class="content">
+                    <p>Nos acompanhe nas redes e fique por dentro de tudo que está rolando e do que está por vir.</p>
+                </div>
+    
+            </div>
+    
+            <div class="social-content">
+                
+                <div class="wrapper-ben">
+
+                        <div class="card">
+                            <div class="header">
+                                <div class="img-box">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </div>
+                                <span class="title">Instagram
+                            </span></div>
+
+                            <div class="content">
+                                <a class="button" href="https://instagram.com/caicararunclub" target="_blank"><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;Abrir</a>
+                            </div>
+                        </div>
+                
+                        <div class="card">
+                            <div class="header">
+                                <div class="img-box">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </div>
+                                <span class="title">Facebook
+                            </span></div>
+
+                            <div class="content">
+                                <a class="button" href="https://www.facebook.com/profile.php?id=61566706345267" target="_blank"><i class="fa-brands fa-facebook-f"></i>&nbsp;&nbsp;Abrir</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="header">
+                                <div class="img-box">
+                                    <i class="fa-brands fa-strava"></i>
+                                </div>
+                                <span class="title">Strava
+                            </span></div>
+
+                            <div class="content">
+                                <a class="button" href="https://strava.com/clubs/caicararunclub" target="_blank"><i class="fa-brands fa-strava"></i>&nbsp;&nbsp;Abrir</a>
+                            </div>
+                        </div>
+    
+                        <div class="card">
+                            <div class="header">
+                                <div class="img-box">
+                                    <i class="fa-brands fa-tiktok"></i>
+                                </div>
+                                <span class="title">Tik Tok
+                            </span></div>
+
+                            <div class="content">
+                                <a class="button" href="https://www.tiktok.com/@caicararunclub" target="_blank"><i class="fa-brands fa-tiktok"></i>&nbsp;&nbsp;Abrir</a>
+                            </div>
+                        </div>                   
+    
+                </div>
+    
+            </div>
+
+        </div>
+
+    </section>
+
+
+<footer>
+
+    <div class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-content-left">
+                
+                    <a href="/" class="logo">
+                        <img src="/assets/logo.png">            
+                    </a>
+
+                    <div class="footer-socialmedia">
+
+                        <a href="https://instagram.com/caicararunclub" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61566706345267" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://strava.com/clubs/caicararunclub" target="_blank"><i class="fa-brands fa-strava"></i></a>
+                        <a href="https://chat.whatsapp.com/EwzTvuDsBEbCz0Qc9dZkSt?mode=gi_t" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.tiktok.com/@caicararunclub" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                        
+                    </div>
+
+                    
+
+            </div>
+
+        </div>
+            
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Caiçara Run Club CNPJ: 66.211.637/0001-35</p>
+    </div>
+
+</footer>
+
+<a id="backToTopButton" href="#top">
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="20" fill="#00856F"/>
+        <path d="M20 27V13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13 20L20 13L27 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>            
+</a>
+<script src="/js/cookies.js"></script>
+<script>
+    cookiesWarning({
+    message:'Utilizamos cookies para melhorar a sua experiência neste site. Ao fechar esta mensagem sem modificar as definições do seu navegador, você concorda com a utilização deles. Saiba mais sobre cookies e nossa <a style="font-weight: bold; color: #ED4B13;" href="/politica-de-cookies/" target="_blank">política de privacidade</a>.',
+    backgroundColor:'rgba(0, 0, 0, 0.95)',
+    textColor:'#f2f2f2',
+    buttonBackgoundColor:'#ED4B13',
+    buttonHoverBackgoundColor:'#ED4B13',
+    buttonTextColor:'#f2f2f2'
+})
+</script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="/js/scroll.js"></script>   
+<script src="/js/main.js"></script>
+<script src="/js/form.js"></script>   
+</body>
+</html>
