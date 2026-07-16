@@ -68,15 +68,20 @@ function aplicarMascaraTelefone(valor) {
 
 //Form
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyXUd3vm0KNRAy5iliqnqEQNcpLStBJbItKIhuRCrY4nNUDfONfS-r5uh6ss444HAja/exec'
-const form = document.forms['formulario']
 
-form.addEventListener('submit', e => {
-  e.preventDefault()
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-  if (window.confirm('Entre no nosso grupo do whatsapp para confirmar seu cadastro.'))
-  { window.open('http://www.google.com', '_blank');};
-   togglePopup()
-  .catch(error => console.error('Erro no envio dos dados!', error.message))
-  form.reset()
-})
+
+const scriptURL =                       
+      "https://script.google.com/macros/s/AKfycbwhLgoWFPFxGKbrfwOLxZrjmn7fcRrCmr0wKF2QNpEM2PD8vIOwROm_7NAehuSHEDEb/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        var formData = new FormData(form);
+
+        fetch(scriptURL, { method: "POST", body: formData })
+          .then((response) => {
+            swal("Done", "Submitted Successfully.", "success");
+          })
+          .catch((error) => {
+            swal("Error", "Something went wrong. please try again!", "error");
+          });
+      });
