@@ -68,7 +68,7 @@ function aplicarMascaraTelefone(valor) {
 
 //Form
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxKU9mEwPyk_Ckp39e5J4b7x_bWiIlaaGHmbD1MtuPl7J6gIRuGFrOk29rsmHVkx_Bl/exec'
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyXUd3vm0KNRAy5iliqnqEQNcpLStBJbItKIhuRCrY4nNUDfONfS-r5uh6ss444HAja/exec'
 const form = document.forms['formulario']
 
 form.addEventListener('submit', e => {
@@ -76,6 +76,7 @@ form.addEventListener('submit', e => {
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
   if (window.confirm('Entre no nosso grupo do whatsapp para confirmar seu cadastro.'))
   { window.open('http://www.google.com', '_blank');};
+   togglePopup()
   .catch(error => console.error('Erro no envio dos dados!', error.message))
   form.reset()
 })
