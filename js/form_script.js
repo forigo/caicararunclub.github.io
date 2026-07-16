@@ -68,7 +68,7 @@ function aplicarMascaraTelefone(valor) {
 
 //Form
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxeFPLslF-rfT0P1KlrW7bGDM4FTFa6BObf_Po-TdCFCQOoRtqeCTlQmFAkmMt1VqaI/exec'
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxKU9mEwPyk_Ckp39e5J4b7x_bWiIlaaGHmbD1MtuPl7J6gIRuGFrOk29rsmHVkx_Bl/exec'
 const form = document.forms['formulario']
 
 form.addEventListener('submit', e => {
