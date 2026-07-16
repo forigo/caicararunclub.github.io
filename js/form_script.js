@@ -72,7 +72,7 @@ function aplicarMascaraTelefone(valor) {
 
 const scriptURL =                       
       "https://script.google.com/macros/s/AKfycbwhLgoWFPFxGKbrfwOLxZrjmn7fcRrCmr0wKF2QNpEM2PD8vIOwROm_7NAehuSHEDEb/exec";
-      const form = document.forms["submit-to-google-sheet"];
+      const form = document.forms["formulario"];
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         var formData = new FormData(form);
