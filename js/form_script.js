@@ -98,7 +98,7 @@ document.getElementById('meuFormulario').addEventListener('submit', function(e) 
   .then(result => {
     if (result.result === 'success') {
       messageDiv.textContent = 'Success! Data added to sheet.';
-      document.getElementById('myForm').reset(); // Clear form
+      document.getElementById('meuFormulario').reset(); // Clear form
     } else {
       throw new Error('Server returned an error');
     }
