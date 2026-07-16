@@ -68,7 +68,49 @@ function aplicarMascaraTelefone(valor) {
 
 //Form
 
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycby_gp5k742SKianMB6emXvccc6uq-svKlnZQVU2tXkox6zQ6hCDPt3ZssLc8U_Fglut/exec"; // Paste your URL here
 
+document.getElementById('meuFormulario').addEventListener('submit', function(e) {
+  e.preventDefault(); // Prevent standard page reload
+
+  const submitBtn = document.getElementById('submitBtn');
+  const messageDiv = document.getElementById('message');
+  
+  // Disable button to prevent double-submissions
+  submitBtn.disabled = true;
+  messageDiv.style.display = 'block';
+  messageDiv.textContent = 'Sending...';
+
+  // 1. Create data object from form
+  const formData = new FormData(e.target);
+  const data = Object.fromEntries(formData.entries());
+
+  // 2. Send request (Set as text/plain to bypass CORS)
+  fetch(SCRIPT_URL, {
+    method: 'POST',
+    mode: 'cors',
+    headers: {
+      'Content-Type': 'text/plain;charset=utf-8'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => response.json())
+  .then(result => {
+    if (result.result === 'success') {
+      messageDiv.textContent = 'Success! Data added to sheet.';
+      document.getElementById('myForm').reset(); // Clear form
+    } else {
+      throw new Error('Server returned an error');
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    messageDiv.textContent = 'An error occurred. Please try again.';
+  })
+  .finally(() => {
+    submitBtn.disabled = false; // Re-enable button
+  });
+});
 /*
 const scriptURL =                       
       "https://script.google.com/macros/s/AKfycbwhLgoWFPFxGKbrfwOLxZrjmn7fcRrCmr0wKF2QNpEM2PD8vIOwROm_7NAehuSHEDEb/exec";
