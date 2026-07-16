@@ -69,7 +69,7 @@ function aplicarMascaraTelefone(valor) {
 //Form
 
 
-
+/*
 const scriptURL =                       
       "https://script.google.com/macros/s/AKfycbwhLgoWFPFxGKbrfwOLxZrjmn7fcRrCmr0wKF2QNpEM2PD8vIOwROm_7NAehuSHEDEb/exec";
       const form = document.forms["formulario"];
@@ -84,4 +84,4 @@ const scriptURL =
           .catch((error) => {
             swal("Error", "Something went wrong. please try again!", "error");
           });
-      });
+      });*/
