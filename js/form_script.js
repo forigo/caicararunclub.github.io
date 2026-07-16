@@ -67,7 +67,7 @@ function aplicarMascaraTelefone(valor) {
 }
 
 //Form
-
+/*
 const scriptURL = 'https://script.google.com/macros/s/AKfycbw7P-nj8hBvzAqO6JbIeDi0aPf3dG9F6RSAekVifW1iMOG3A6t_zPvO_Ns7YBaDo4Ie/exec'
 
 const form = document.forms['formulario']
@@ -80,4 +80,4 @@ form.addEventListener('submit', e => {
   .then(response => alert("Your form has been successfully submitted. We truly appreciate your interest and will be in touch with you shortly." ))
   .then(() => { window.location.reload(); })
   .catch(error => error('Error!', error.message))
-})
+})*/
