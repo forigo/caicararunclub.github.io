@@ -68,62 +68,16 @@ function aplicarMascaraTelefone(valor) {
 
 //Form
 
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycby_gp5k742SKianMB6emXvccc6uq-svKlnZQVU2tXkox6zQ6hCDPt3ZssLc8U_Fglut/exec"; // Paste your URL here
+const scriptURL = 'https://script.google.com/macros/s/AKfycbw7P-nj8hBvzAqO6JbIeDi0aPf3dG9F6RSAekVifW1iMOG3A6t_zPvO_Ns7YBaDo4Ie/exec'
 
-document.getElementById('meuFormulario').addEventListener('submit', function(e) {
-  e.preventDefault(); // Prevent standard page reload
+const form = document.forms['formulario']
 
-  const submitBtn = document.getElementById('submitBtn');
-  const messageDiv = document.getElementById('message');
+form.addEventListener('submit', e => {
   
-  // Disable button to prevent double-submissions
-  submitBtn.disabled = true;
-  messageDiv.style.display = 'block';
-  messageDiv.textContent = 'Sending...';
-
-  // 1. Create data object from form
-  const formData = new FormData(e.target);
-  const data = Object.fromEntries(formData.entries());
-
-  // 2. Send request (Set as text/plain to bypass CORS)
-  fetch(SCRIPT_URL, {
-    method: 'POST',
-    mode: 'cors',
-    headers: {
-      'Content-Type': 'text/plain;charset=utf-8'
-    },
-    body: JSON.stringify(data)
-  })
-  .then(response => response.json())
-  .then(result => {
-    if (result.result === 'success') {
-      messageDiv.textContent = 'Success! Data added to sheet.';
-      document.getElementById('meuFormulario').reset(); // Clear form
-    } else {
-      throw new Error('Server returned an error');
-    }
-  })
-  .catch(error => {
-    console.error('Error:', error);
-    messageDiv.textContent = 'An error occurred. Please try again.';
-  })
-  .finally(() => {
-    submitBtn.disabled = false; // Re-enable button
-  });
-});
-/*
-const scriptURL =                       
-      "https://script.google.com/macros/s/AKfycbwhLgoWFPFxGKbrfwOLxZrjmn7fcRrCmr0wKF2QNpEM2PD8vIOwROm_7NAehuSHEDEb/exec";
-      const form = document.forms["formulario"];
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        var formData = new FormData(form);
-
-        fetch(scriptURL, { method: "POST", body: formData })
-          .then((response) => {
-            swal("Done", "Submitted Successfully.", "success");
-          })
-          .catch((error) => {
-            swal("Error", "Something went wrong. please try again!", "error");
-          });
-      });*/
+  e.preventDefault()
+  
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Your form has been successfully submitted. We truly appreciate your interest and will be in touch with you shortly." ))
+  .then(() => { window.location.reload(); })
+  .catch(error => error('Error!', error.message))
+})
