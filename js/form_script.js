@@ -76,7 +76,6 @@ form.addEventListener('submit', e => {
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
   if (window.confirm('Entre no nosso grupo do whatsapp para confirmar seu cadastro.'))
   { window.open('http://www.google.com', '_blank');};
-  togglePopup()
   .catch(error => console.error('Erro no envio dos dados!', error.message))
   form.reset()
 })
