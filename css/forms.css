@@ -39,6 +39,10 @@ h4{
     color: white;
 }
 
+h2 {
+    color: var(--primary-color);
+}
+
 .form_text {
     max-width: 500px;
     color: var(--light-color); 
@@ -73,6 +77,11 @@ p {
     color: var(--light-color);
     font-size: 12px;
     text-align: left;
+}
+
+p span {
+    font-weight: bold;
+    color: var(--primary-color);
 }
 
 input:not(:placeholder-shown) {
@@ -110,14 +119,18 @@ label{
     font-size: 12px;
 }
 
-#enviar{
+
+button{
     border: none;
     background-color: var(--primary-color);
     color: var(--light-color);
-    width: 200px;
+    width: auto;
     margin-top: 40px;
     border-radius: 10px;
     cursor: pointer;
+    padding: 10px 40px;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .footer-form img {
