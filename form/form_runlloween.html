@@ -22,8 +22,8 @@
         </div>
 
         <div class="container">
-
-            <form method="post" action="https://api.web3forms.com/submit" name="formulario" id="meuFormulario">
+            
+            <form action="" method="POST">
                 <input type="hidden" name="access_key" value="cf16f3cb-1fda-4d16-a969-62caab6705c7">
                 <img src="/assets/runlloween.png">
                 <div class="form_text">
@@ -37,35 +37,33 @@
                     <p>Bora pra mais um corre juntos, já que aqui ninguém corre sozinho.</p>
 
                 </div>
-                <input type="hidden" id="dataHoraEnvio" name="dataHoraEnvio">
-                <input type="email" name="email" placeholder="Email" required>
                 <input type="text" name="nome" placeholder="Nome" required>
-                <input type="text" id="nascimento" name="nascimento" placeholder="Data de Nascimento" onfocus="this.type='date'" onblur="if(!this.value) this.type='text'" required >
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" id="nascimento" name="data_de_nascimento" placeholder="Data de Nascimento" onfocus="this.type='date'" onblur="if(!this.value) this.type='text'" required >
                 <input type="text" id="cpf" name="cpf" placeholder="CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="14" required>
                 <input type="tel" id="celular" name="celular" placeholder="WhatsApp com DDD" maxlength="15" autocomplete="tel" required>
                 
                 <p style="margin-bottom: 5px;">Informe o nome, DDD + número do celular do contato do responsável em caso de incidentes durante o evento</p>
-                <input type="text" name="responsavel" placeholder="Nome + Celular" required>
+                <input type="text" name="nome_do_responsavel" placeholder="Nome + Celular" required>
                 
                 <p>Declaro estar em boas condições físicas e condicionado/apto a participar deste evento e assumo total responsabilidade por minha participação e acidentes.</p>
                 <div class="checkbox-item">
-                    <input type="checkbox" id="termo_resp" name="termo_responsabilidade" required>
+                    <input type="checkbox" id="termo_resp" name="aptidao_fisica_e_responsabilidade_por_participar" value="confirmo" required>
                     <label for="termo_resp">Li e aceito o termo de responsabilidade.</label>
                 </div>
                 <br><br>
                 
                 <p style="text-align: left;">Autorizo o uso de minha imagem em fotos e vídeos realizados durante o evento para divulgação em redes sociais e materiais do grupo.</p>
                 <div class="checkbox-item">
-                    <input type="checkbox" id="aut_midia" name="autorizacao_midia" required>
+                    <input type="checkbox" id="aut_midia" name="autorizacao_de_uso_de_imagem" value="confirmo" required>
                     <label for="aut_midia">Li e aceito o termo de responsabilidade.</label>
                 </div>
                 <br><br>
                 
                 <p style="display: flex;">🚨Para ficar por dentro, participe do nosso grupo no WhatsApp: <a class="form-link" href="https://chat.whatsapp.com/EwzTvuDsBEbCz0Qc9dZkSt?mode=gi_t" target="_blank">Entrar</a></p>
-                
-                <button type="submit" value="Enviar" id="enviar">Enviar</button>
+                <button type="submit">Enviar</button>
             </form>
-            
+
         </div>
 
         <div class="footer-form">
@@ -73,8 +71,6 @@
         </div>
 
     </div>
-
-   
         
     <script src="/js/form_script.js"></script>
 </body>
