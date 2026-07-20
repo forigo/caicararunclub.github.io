@@ -22,16 +22,7 @@ function validarCPF(cpf) {
     return true;
 }
 
-document.getElementById('meuFormulario').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const cpf = document.getElementById('cpf').value;
-    if (!validarCPF(cpf)) {
-        alert("CPF Inválido");
-        }
-});
-
 //WhatsApp
-
 const inputCelular = document.getElementById('celular');
 
 inputCelular.addEventListener('input', (event) => {
@@ -66,18 +57,57 @@ function aplicarMascaraTelefone(valor) {
     return valor;
 }
 
-//Form
-/*
-const scriptURL = 'https://script.google.com/macros/s/AKfycbw7P-nj8hBvzAqO6JbIeDi0aPf3dG9F6RSAekVifW1iMOG3A6t_zPvO_Ns7YBaDo4Ie/exec'
+// Success
 
-const form = document.forms['formulario']
+const meuFormulario = document.querySelector('form');
 
-form.addEventListener('submit', e => {
-  
-  e.preventDefault()
-  
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-  .then(response => alert("Your form has been successfully submitted. We truly appreciate your interest and will be in touch with you shortly." ))
-  .then(() => { window.location.reload(); })
-  .catch(error => error('Error!', error.message))
-})*/
+meuFormulario.addEventListener('submit', async function(evento) {
+    evento.preventDefault(); // Impede o recarregamento da página e o envio HTML padrão
+
+    const inputData = document.getElementById('nascimento').value;
+    if (!inputData) {
+        alert('Por favor, preencha sua data de nascimento.');
+        return;
+    }
+
+    const cpf = document.getElementById('cpf').value;
+    if (!validarCPF(cpf)) {
+        alert("CPF Inválido");
+    }
+
+    const dataNascimento = new Date(inputData + 'T00:00:00'); // Força a data no fuso local
+    const hoje = new Date();
+    
+    // Validação básica: data não pode ser no futuro
+    if (dataNascimento > hoje) {
+        alert('A data de nascimento não pode ser no futuro.');
+        return;
+    }
+
+    if (validarCPF(cpf) && dataNascimento < hoje){
+        
+        const formData = new FormData(meuFormulario);
+            try {
+            // 2. Envie os dados para a sua API via AJAX/Fetch
+                const resposta = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        // 'Content-Type': 'application/json' (se estiver enviando JSON ao invés de FormData)
+                    }
+                });
+
+                // 3. Verifique se a API retornou sucesso
+                if (resposta.ok) {
+                    // 4. Redirecione para a sua página de sucesso
+                    window.location.href = '/form/success.html'; 
+                } else {
+                    alert('Erro ao enviar o formulário. Tente novamente.');
+                }
+            } catch (erro) {
+                console.error('Erro na requisição:', erro);
+        }
+    }
+    
+    
+});
