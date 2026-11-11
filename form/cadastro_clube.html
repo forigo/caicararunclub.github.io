@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
     <script>
         // Verifica se a chave de permissão existe no sessionStorage
-        if (sessionStorage.getItem('acessoPermitido') !== 'false') {
+        if (sessionStorage.getItem('acessoPermitido') !== 'true') {
             alert('Acesso negado! Você precisa passar pela página inicial.');
             window.location.href = '/form/form_bemvindo.html'; // Redireciona de volta
         } else {
