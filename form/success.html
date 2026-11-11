@@ -13,6 +13,16 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/css/forms.css">
     <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    <script>
+        // Verifica se a chave de permissão existe no sessionStorage
+        if (sessionStorage.getItem('acessoPermitido') !== 'true') {
+            alert('Acesso negado! Você precisa passar pela página inicial.');
+            window.location.href = '/'; // Redireciona de volta
+        } else {
+            // Remove a chave para que, se ele atualizar a página ou tentar reusar o link, o acesso seja bloqueado
+            sessionStorage.removeItem('acessoPermitido');
+        }
+    </script>
 </head>
 <body>
 
