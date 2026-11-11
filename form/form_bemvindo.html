@@ -1,0 +1,93 @@
+<!DOCTYPE html> 
+<html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/ccc21e8b90.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <title>Bem vindo(a) ao Clube! - Caiçara Run Club</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <div class="content">
+        <div class="form-header">
+            <img src="/assets/new_logo.png">
+        </div>
+
+        <div class="container">
+            
+            <form action="" method="POST">
+                <input type="hidden" name="access_key" value="7cc3fa87-a048-4735-8ae7-63356105de18">
+                <img style="border-radius: 8px 8px 0 0;" src="https://caicararunclub.com.br/assets/back_about_2.png">
+                <div class="form_text">
+                    <p>Seja muito bem-vindo(a) ao nosso grupo, aqui o que importa é não ficar parado 💥</p>
+                    
+                    <p>* O cadastro no clube é totalmente gratuito e qualquer um pode entrar.</p>
+
+                    <p>Aqui não importa se você está dando os seus primeiros passos, se prefere caminhar, mandar aquele pace fofoca para colocar a conversa em dia ou se está treinando para bater o seu recorde pessoal: aqui ninguém corre sozinho!
+                        Nosso objetivo é nos incentivarmos a cada km, celebrar cada conquista e evoluir juntos, sempre com muito respeito, energia lá em cima e parceria.</p>
+                    
+                    <p>Para garantir que a nossa convivência seja leve e incrível para todo mundo:</p>
+                    <p>-<i>Nosso foco total é a corrida, saúde e integração.</i></p>
+                    <p>-<i>Não permitimos conversas sobre política, discussões ou correntes.</i></p>
+                    <p>-<i>Respeito mútuo é a nossa única regra inegociável.</i></p>
+                    <br>
+                    <p><i>(*) Reforçamos que esse cadastro não isenta a necessidade de realizar as inscrições através dos formulários adequados para a participação nos nossos evento.</i></p>
+                    <p><span>Participar do grupo te dará o benefício de, além de fazer parte da cambada que corre com garra, de também usufruir dos descontos junto aos nossos parceiros.</span></p>
+
+                    <p>🚨 O <span>Caiçara Run Club</span> não é assessoria de corrida, para isso recomendamos profissionais capacitados para o auxílio desejado.🚨</p>
+
+                    <p><i>Correr sozinho pode até ser bom, mas correr em cambada pode ser muito melhor. Na corrida de rua, cada um da seu próprio passo, mas a energia vem do coletivo, do incentivo do colega ao lado, da batida de tênis no asfalto em sincronia. Ninguém fica para trás, se alguém cansa, outro motiva, um puxa e todos vão.</i></p>
+
+                    <p><span>Essa é a ideia do Caiçara Run Club, uma cambada onde um ajuda o outro. 💪</span></p>
+                    <p>Então bora correr com a gente‼️</p>
+                </div>
+
+                <input type="text" name="nome" placeholder="Nome" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" id="nascimento" name="data_de_nascimento" placeholder="Data de Nascimento" onfocus="this.type='date'" onblur="if(!this.value) this.type='text'" required >
+                <input type="text" id="cpf" name="cpf" placeholder="CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="14" required>
+                <input type="tel" id="celular" name="celular" placeholder="WhatsApp com DDD" maxlength="15" autocomplete="tel" required>
+                <input type="text" name="instagram" placeholder="Instagram" required>
+                
+                <p style="text-align: left;">Autorizo o uso de minha imagem em fotos e vídeos realizados durante o evento para divulgação em redes sociais e materiais do grupo.</p>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="aut_midia" name="autorizacao_de_uso_de_imagem" value="confirmo" required>
+                    <label for="aut_midia">Li e estou de acordo.</label>
+                </div>
+                <br><br>
+                <p style="text-align: left;">Autorizo incluir minhas informações na página de membros do clube. Usaremos apenas a foto de perfil do instagram, nome e data de entrada no clube.</p>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="aut_membro" name="autorizacao_de_uso_de_info" value="confirmo" required>
+                    <label for="aut_membro">Li e confirmo.</label>
+                </div>
+                <br><br>
+                <p style="text-align: left;">Estou de acordo com o Código de Conduta e Convivência do grupo.</p>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="cod_conduta" name="acordo_codigo_conduta" value="confirmo" required>
+                    <label for="cod_conduta">Li e confirmo estar de acordo.</label>
+                </div>
+                <br><br>
+                <a class="form-link" style="width: auto; margin: 0 auto; background-color: #ff4e08;" href="/codigo-de-conduta" target="_blank">Código de Conduta e Convivência</a>
+                <br>
+                <button type="submit">Enviar</button>
+            </form>
+
+        </div>
+
+        <div class="footer-form">
+            <a href="/"><img src="/assets/logo.png"></a>
+        </div>
+
+    </div>
+        
+    <script src="/js/script_bemvindo.js"></script>
+</body>
+</html>
