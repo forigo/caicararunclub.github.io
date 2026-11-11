@@ -15,13 +15,13 @@
     <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
     <script>
         // Verifica se a chave de permissão existe no sessionStorage
-       // if (sessionStorage.getItem('acessoPermitido') !== 'false') {
-         //   alert('Acesso negado! Você precisa passar pela página inicial.');
-           // window.location.href = '/form/form_bemvindo.html'; // Redireciona de volta
-        //} else {
+        if (sessionStorage.getItem('acessoPermitido') !== 'false') {
+            alert('Acesso negado! Você precisa passar pela página inicial.');
+            window.location.href = '/form/form_bemvindo.html'; // Redireciona de volta
+        } else {
             // Remove a chave para que, se ele atualizar a página ou tentar reusar o link, o acesso seja bloqueado
-          //  sessionStorage.removeItem('acessoPermitido');
-        //}
+            sessionStorage.removeItem('acessoPermitido');
+        }
     </script>
 </head>
 <body>
