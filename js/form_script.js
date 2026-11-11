@@ -99,6 +99,7 @@ meuFormulario.addEventListener('submit', async function(evento) {
 
                 // 3. Verifique se a API retornou sucesso
                 if (resposta.ok) {
+                    sessionStorage.setItem('acessoPermitido', 'true');
                     // 4. Redirecione para a sua página de sucesso
                     window.location.href = '/form/success.html'; 
                 } else {
